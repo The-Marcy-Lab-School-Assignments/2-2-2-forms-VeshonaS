@@ -8,15 +8,26 @@
 <body>
   <main>
     <h1>Forms Practice</h1>
-    <form action="" id ="new-user-form">
-      <h2 id="form-heading" aria-labelledby="form-heading">Create A New User</h2>
+    <form action="" id ="new-user-form"  aria-labelledby="form-heading">
+      <h2 id="form-heading">Create A New User</h2>
+      <label for="username">Username:</label>
+      <input type="text" id ="username" name="username" placeholder="Add your username">
       <fieldset>
         <legend>Coding Level</legend>
         <label for="beginner">Beginner</label>
-        <input type="radio" checked name ="codingLevel" id="beginner" value="beginner">
+        <input type="radio" name ="codingLevel" id="beginner" value="beginner" checked/>
         <label for="proficient">Proficient</label>
-        <input type="radio" checked id="proficient" value="proficient">
+        <input type="radio" name ="codingLevel" id="proficient" value="proficient" />
       </fieldset>
+      <label for="location">Location:</label>
+      <select name="location" id="location">
+        <option value="brooklyn">Brooklyn</option>
+        <option value="other borough">Other Borough</option>
+        <option value="out of state">Out Of State</option>
+      </select>
+      <input type="checkbox" id="did-like-assignment" name="didLikeAssignment">
+      <label for="did-like-assignment">Did you enjoy this assignment?</label>
+      <button type="submit">Submit</button>
     </form>
   <section id="results" aria-labelledby="results-heading">
     <h2 id="results-heading">Results</h2>
@@ -26,8 +37,6 @@
     <p>Did you like this assignment? <span id="results-did-like-assignment"></span></p>
   </section>
 </main>
-<label for="username-input">Username</label>
-<input id="username-input" type="text" name='username' />
 
   <script src="index.js"></script>
 </body>
